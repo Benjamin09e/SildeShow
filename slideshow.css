@@ -1,0 +1,51 @@
+#one{
+	/*animation: exemple 5s linear 1s infinite alternate;*/
+}
+
+#one, #two, #three{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 1s;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+
+.prev, .next{
+	font-size: 5em;
+	color: white;
+	text-shadow: 0 0 10px black;
+	position: absolute;
+	top: calc(50% - 40px);
+}
+
+.prev{
+	left: 35px;
+}
+
+.next{
+	right: 35px;
+}
+
+#two, #three{
+	opacity: 0;
+	visibility: hidden;
+}
+
+#one:target, #two:target, #three:target{
+	visibility: visible;
+	opacity: 1;
+}
+
+@keyframes exemple{
+	0%{ width: 0%; }
+	50%{ width: 100%; }
+	60%{ width: 50%; }
+	90%{ width: 80%; }
+	100%{ width: 100%; }
+}
